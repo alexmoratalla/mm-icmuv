@@ -1,0 +1,29 @@
+&control
+         calculation = 'scf'
+              prefix = 'bp'
+          pseudo_dir = '../pseudos/'
+           verbosity = 'high'
+          wf_collect = .true.
+/&end
+&system
+           celldm(1) = 4.7
+           celldm(3) = 2.553191489361702
+             ecutwfc = 40
+               ibrav = 4
+                 nat = 2
+                ntyp = 2
+         occupations = 'fixed'
+/&end
+&electrons
+            conv_thr = 1e-10
+/&end
+
+
+ATOMIC_SPECIES
+   B   10.811      B.rel-pz-nc.UPF
+   P  30.9738    P.rel-pz-n-nc.UPF
+ATOMIC_POSITIONS { crystal }
+  P   0.0000000000   0.0000000000   0.5000000000
+  B   0.3333333333   0.6666666667   0.5000000000
+K_POINTS { automatic }
+  6  6  1  0  0  0
